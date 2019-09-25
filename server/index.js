@@ -7,7 +7,8 @@ const affluentService = require('./services/affluent')
 const reqresService = require('./services/reqres')
 const BasicModel = require('./lib/basicModel')
 
-app.use(express.static('../client/dist'))
+app.use('/', express.static(__dirname + '/../client/dist'))
+
 app.use(cors())
 app.use(morgan('tiny'))
 
